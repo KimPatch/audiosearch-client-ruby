@@ -5,8 +5,8 @@ Gem::Specification.new do |s|
   s.rubyforge_project = "nowarning"
   s.summary     = "Ruby client for the Audiosear.ch API"
   s.description = "Ruby client for the Audiosear.ch API. See https://www.audiosear.ch/"
-  s.authors     = ["Peter Karman"]
-  s.email       = 'peter@popuparchive.com'
+  s.authors     = ["Pop Up Archive", "Peter Karman"]
+  s.email       = 'edison@popuparchive.com'
   s.homepage    = 'https://github.com/popuparchive/audiosearch-client-ruby'
   s.files       = ["lib/audiosearch.rb"]
   s.license     = 'Apache'
