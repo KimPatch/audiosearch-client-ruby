@@ -74,7 +74,7 @@ describe "people" do
       expect(person.episodes.size).to be >= 1
       # fetch specific person
       p = client.get person.urls.self
-      expect(person.name).to eq p.name
+      expect(person.name).to eq p.first.name
     end
   end
 
@@ -89,7 +89,7 @@ describe "tastemakers" do
     expect(res.is_success).to be_truthy
     res.each do |episode|
       printf("[%s] %s (%s)\n", episode.id, episode.title, episode.show_title)
-      expect(episode.audio_files.size).to eq 1
+      expect(episode.episode.audio_files.size).to eq 1
     end
   end
 
