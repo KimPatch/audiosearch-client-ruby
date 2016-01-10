@@ -71,7 +71,7 @@ module Audiosearch
         raise "Bad :host value " + err
       end
       if (!uri.host || !uri.port)
-        raise "Bad :host value " + @server
+        raise "Bad :host value " + @host
       end
 
       @agent = get_agent()
