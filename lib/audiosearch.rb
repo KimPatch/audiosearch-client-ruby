@@ -9,6 +9,7 @@ require 'json'
 require 'faraday_middleware'
 require 'oauth2'
 require 'uri'
+require 'pp'
 
 module Audiosearch
 
@@ -124,7 +125,7 @@ module Audiosearch
         [:mashify, :json].each{|mw| faraday.response(mw) }
         if !@croak_on_404
           faraday.use Audiosearch::FaradayErrHandler
-        else 
+        else
           faraday.response(:raise_error)
         end
         faraday.request :authorization, 'Bearer', @token.token
